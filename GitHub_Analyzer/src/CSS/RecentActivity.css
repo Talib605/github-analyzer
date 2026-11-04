@@ -1,0 +1,94 @@
+.activity-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-list.expanded {
+  max-height: 520px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.activity-item {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 46px;
+  padding: 6px 8px;
+  margin: 0 -8px;
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.activity-item:hover {
+  background: var(--hover-bg);
+}
+
+.activity-item + .activity-item {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.activity-icon {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 7px;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+}
+
+.activity-icon.push {
+  color: #7c70ff;
+  background: rgba(124, 112, 255, 0.14);
+}
+
+.activity-icon.pull {
+  color: #2fbf71;
+  background: rgba(47, 191, 113, 0.14);
+}
+
+.activity-icon.star {
+  color: #e0a800;
+  background: rgba(224, 168, 0, 0.15);
+}
+
+.activity-icon.issue {
+  color: #f0603f;
+  background: rgba(240, 96, 63, 0.14);
+}
+
+.activity-icon.fork,
+.activity-icon.create {
+  color: #2dabd4;
+  background: rgba(45, 171, 212, 0.14);
+}
+
+.activity-icon.comment {
+  color: #58a6ff;
+  background: rgba(88, 166, 255, 0.14);
+}
+
+.activity-icon.release {
+  color: #e05fa5;
+  background: rgba(224, 95, 165, 0.14);
+}
+
+.activity-item p {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: var(--text-body);
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.activity-item > span {
+  color: var(--text-secondary);
+  font-size: 12px;
+  white-space: nowrap;
+}

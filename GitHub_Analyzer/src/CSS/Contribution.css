@@ -1,0 +1,95 @@
+.contribution-card {
+  padding: 18px 20px;
+  min-width: 0;
+}
+
+.contribution-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.contribution-scroll {
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.contribution-calendar {
+  display: grid;
+  grid-template-rows: 16px repeat(7, auto);
+  gap: 3px;
+  min-width: 640px;
+}
+
+.cal-month {
+  color: var(--text-secondary);
+  font-size: 11px;
+  line-height: 14px;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.cal-day-label {
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 10px;
+}
+
+.contribution {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 2px;
+  outline: 1px solid rgba(127, 127, 127, 0.08);
+  outline-offset: -1px;
+  transition: transform 0.1s ease;
+}
+
+.contribution:hover {
+  transform: scale(1.35);
+  outline-color: var(--text-secondary);
+}
+
+/* Contribution Levels */
+
+.level-0 {
+  background: var(--cal-0);
+}
+
+.level-1 {
+  background: var(--cal-1);
+}
+
+.level-2 {
+  background: var(--cal-2);
+}
+
+.level-3 {
+  background: var(--cal-3);
+}
+
+.level-4 {
+  background: var(--cal-4);
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-top: 12px;
+  color: var(--text-secondary);
+  font-size: 11px;
+}
+
+.legend-note {
+  margin-right: auto;
+}
+
+.legend-box {
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+}
